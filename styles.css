@@ -1,0 +1,106 @@
+body {
+  background-color: #0e0e0e;
+  color: white;
+  font-family: 'Tahoma', sans-serif;
+  direction: rtl;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.background-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 90% 50%, rgba(128,0,128,0.2), transparent 60%),
+              radial-gradient(circle at 10% 50%, rgba(0,255,0,0.1), transparent 60%);
+  z-index: -1;
+  pointer-events: none;
+  backdrop-filter: blur(8px);
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  color: #cfcfcf;
+}
+
+.animated-button {
+  background: linear-gradient(to left, #6a00ff, #00c853);
+  padding: 12px 24px;
+  font-size: 18px;
+  border: none;
+  border-radius: 14px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+.animated-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #6a00ff77;
+}
+
+.bots-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.bot-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 0.2s ease;
+}
+.bot-card:hover {
+  transform: scale(1.01);
+}
+
+.bot-card img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid #6a00ff55;
+}
+
+.bot-card .info {
+  flex: 1;
+  text-align: right;
+  margin-right: 15px;
+  color: #e0e0e0;
+}
+
+.bot-card .actions button {
+  margin: 0 3px;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  color: white;
+  font-weight: bold;
+}
+.actions .delete { background-color: #e53935; }
+.actions .settings { background-color: #ffb300; }
+.actions .power { background-color: #43a047; }
+
+.footer {
+  margin-top: 50px;
+  font-size: 0.95rem;
+  color: #aaaaaa;
+}
